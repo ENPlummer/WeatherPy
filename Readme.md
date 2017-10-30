@@ -6,8 +6,8 @@
 2. The correlation between humidity and latitude is very weak.
 3. There is almost no correlation between cloudiness and latitude.
 4. The correlation between latitude and wind speed is very weak.
-5. Although my sample was random there was a bias toward cities in the northern 
-   hemisphere. Most of the cities in my sample were located in Europe.
+5. Although my sample was random, there was a bias toward cities in the northern 
+   hemisphere in my sample. Most of the cities in my sample were located in Europe.
 
 
 ```python
