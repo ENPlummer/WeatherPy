@@ -1,4 +1,14 @@
 
+# Analysis
+
+1. There is a relatively strong correlation bewteen latitude and temperature. The lower 
+   latitudes have higher temperatures and the higher latitudes have lower temperatures.
+2. The correlation between humidity and latitude is very weak.
+3. There is almost no correlation between cloudiness and latitude.
+4. The correlation between latitude and wind speed is very weak.
+5. Although my sample was random there was a bias toward cities in the northern 
+   hemisphere. Most of the cities in my sample were located in Europe.
+
 
 ```python
 #Dependencies
@@ -2348,20 +2358,13 @@ selected_cities.to_csv("WorldWeatherData.csv", index=False)
 
 
 ```python
-plt.scatter(selected_cities["Latitude"],selected_cities["Temperature"])
-plt.show()
+plt.scatter(selected_cities["Latitude"],selected_cities["Temperature"], alpha = 0.5)
+
+plt.title("Temperature (F) vs. Latitude Date of Analysis 10-29-2017")
+plt.xlabel("Latitude")
+plt.ylabel("Temperature (F)")
 plt.savefig("Temperature.png")
-```
-
-
-![png](output_6_0.png)
-
-
-
-```python
-plt.scatter(selected_cities["Latitude"],selected_cities["Humidity"])
 plt.show()
-plt.savefig("Humidity.png")
 ```
 
 
@@ -2370,9 +2373,13 @@ plt.savefig("Humidity.png")
 
 
 ```python
-plt.scatter(selected_cities["Latitude"],selected_cities["Cloudiness"])
+plt.scatter(selected_cities["Latitude"],selected_cities["Humidity"], alpha = 0.75)
+
+plt.title("Latitude vs. Humidity Date of Analysis 10-29-2017")
+plt.xlabel("Latitude")
+plt.ylabel("Humidity")
+plt.savefig("Humidity.png")
 plt.show()
-plt.savefig("Cloudiness.png")
 ```
 
 
@@ -2381,9 +2388,13 @@ plt.savefig("Cloudiness.png")
 
 
 ```python
-plt.scatter(selected_cities["Latitude"],selected_cities["Wind Speed"])
+plt.scatter(selected_cities["Latitude"],selected_cities["Cloudiness"], alpha = 0.75)
+
+plt.title("Latitude vs.Cloudiness Date of Analysis 10-29-2017")
+plt.xlabel("Latitude")
+plt.ylabel("Cloudiness")
+plt.savefig("Cloudiness.png")
 plt.show()
-plt.savefig("Wind Speed.png")
 ```
 
 
@@ -2392,12 +2403,27 @@ plt.savefig("Wind Speed.png")
 
 
 ```python
-plt.scatter(selected_cities["Longitude"],selected_cities["Latitude"])
+plt.scatter(selected_cities["Latitude"],selected_cities["Wind Speed"], alpha= 0.75)
+plt.title("Latitude vs Wind Speed Date of Analysis 10-29-2017")
+plt.xlabel("Latitude")
+plt.ylabel("Wind Speed")
+plt.savefig("Wind Speed.png")
 plt.show()
 ```
 
 
 ![png](output_10_0.png)
+
+
+
+```python
+plt.scatter(selected_cities["Longitude"],selected_cities["Latitude"])
+plt.title("Longitude vs Latitude")
+plt.show()
+```
+
+
+![png](output_11_0.png)
 
 
 
