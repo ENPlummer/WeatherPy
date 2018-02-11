@@ -1,5 +1,10 @@
+# WeatherPy
 
-# Analysis
+The objective of this project was to analyze the effect of latitude on the following weather variables: temperature, humidity, cloudiness, and wind speed. To get the 500 randomly selected cities I used a CSV file from the Citypy Python library Github repository and the sample method. Once I had my 500 randomly selected zip codes, I pulled weather data for those locations from the Open Weather API. I then used this data to generate scatter plots using matplotlib to analyze the correlation between latitude and the afore mentioned weather variables. These are the key insights I found:
+
+
+
+## Analysis
 
 1. There is a relatively strong correlation bewteen latitude and temperature. The lower 
    latitudes have higher temperatures and the higher latitudes have lower temperatures.
